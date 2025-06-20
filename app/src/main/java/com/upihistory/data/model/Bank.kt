@@ -7,4 +7,8 @@ enum class Bank {
     ICICI,
     FEDERAL,
     FI_FEDERAL,
+    BOI,
+    PNB,
+    AXIS,
+    KOTAK,
 }

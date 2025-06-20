@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.upihistory.data.model.Bank
@@ -90,6 +91,13 @@ fun TransactionItem(transaction: UpiTransaction) {
     val date = formatDateTime(transaction.timestamp)
     val nameOrVpa = transaction.receiverName?.takeIf { it.isNotBlank() } ?: transaction.receiverVpa.orEmpty()
 
+    var amountColor: Color = MaterialTheme.colorScheme.onSurfaceVariant
+    var amountPrefix: String = ""
+    if (transaction.transactionType == TransactionType.CREDIT) {
+        amountColor = Color(0xFF81C784)
+        amountPrefix = "+ "
+    }
+
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -112,7 +120,7 @@ fun TransactionItem(transaction: UpiTransaction) {
             }
 
             Text(
-                text = "₹${"%.0f".format(transaction.amount / 100.0)}", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodyLarge
+                text = "${amountPrefix}₹${"%.0f".format(transaction.amount / 100.0)}", color = amountColor, style = MaterialTheme.typography.bodyLarge
             )
         }
     }
