@@ -1,4 +1,4 @@
-# UPI History 📲💸
+# UPI History
 
 Track, view, and analyze all your UPI payments in one place.
 
@@ -28,7 +28,7 @@ Track, view, and analyze all your UPI payments in one place.
 
 ## Installation 🚀
 
-1. Download the latest APK from [Releases](https://github.com/yourusername/upihistory/releases)  
+1. Download the latest APK from [Releases](https://github.com/mhdsbq/UpiHistory/releases)  
 2. Allow SMS permissions when prompted (required for parsing UPI SMS)  
 3. Open the app and enjoy full UPI history insight!  
 
