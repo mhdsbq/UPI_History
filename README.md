@@ -1,4 +1,4 @@
-# UPI History 📲💸
+# UPI History
 
 Track, view, and analyze all your UPI payments in one place.
 
@@ -22,13 +22,12 @@ Track, view, and analyze all your UPI payments in one place.
 <p align="center">
   <img src="screenshots/upi-history-screenshot.png" alt="Transaction List" height="300" />
 </p>
-*Clean list view with grouped transactions*
 
 ---
 
 ## Installation 🚀
 
-1. Download the latest APK from [Releases](https://github.com/yourusername/upihistory/releases)  
+1. Download the latest APK from [Releases](https://github.com/mhdsbq/UpiHistory/releases)  
 2. Allow SMS permissions when prompted (required for parsing UPI SMS)  
 3. Open the app and enjoy full UPI history insight!  
 
@@ -36,5 +35,21 @@ Track, view, and analyze all your UPI payments in one place.
 
 ## How It Works 🔍
 
-The app reads UPI transaction SMS messages received on your phone as the data source.
+The app uses UPI transaction SMS messages received on your phone as its data source.
 
+---
+
+## Permissions 🔐
+
+This app requires **SMS read permission** to securely parse UPI transaction messages sent via SMS on your device.
+
+- **Why SMS permission?**  
+  UPI transaction notifications are received as SMS messages. To extract and display your transaction history, the app needs to read these SMS messages locally on your phone.
+
+- **Privacy first:**  
+  All SMS parsing happens **locally on your device**.  
+  No SMS content or personal data is sent or stored on any server.
+
+- **Granting permission:**  
+  You will be prompted to grant SMS read access when you first open the app.  
+  You can revoke this permission anytime via your device settings.
